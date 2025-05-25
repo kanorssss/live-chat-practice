@@ -11,8 +11,11 @@ const getcollection = (collection) => {
     .orderBy("createAt");
 
   collectionRef.onSnapshot((snap) => {
-    let result = [];
-    snap.docs.forEach((doc) => {});
+    let results = [];
+    snap.docs.forEach((doc) => {
+      // spread ...
+      doc.data().createdAt && results.push({ ...doc.data(), id: doc.id });
+    });
   });
 };
 

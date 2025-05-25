@@ -6,6 +6,7 @@ const useCollection = (collection) => {
   const error = ref(null);
 
   //   add data or document to the collection through the firebase
+  // every request add default null like this
   const addDoc = async (doc) => {
     error.value = null;
     try {

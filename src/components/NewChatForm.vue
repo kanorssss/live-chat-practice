@@ -19,6 +19,7 @@ export default {
   setup() {
     const { user } = getUser();
     const message = ref("");
+
     // add the message input to the collection
     const { addDoc, error } = useCollection("message");
 
