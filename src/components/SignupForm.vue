@@ -37,6 +37,8 @@ export default {
       );
       if (!error.value) {
         context.emit("signup");
+      } else {
+        alert("Error");
       }
     };
 
