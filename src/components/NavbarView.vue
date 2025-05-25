@@ -19,11 +19,12 @@ export default {
     const { logout, error } = useLogout();
     const { user } = getUser();
     const router = useRouter();
+
     const handleLogout = async () => {
       await logout();
       if (!error.value) {
         console.log("user logged out");
-        router.push({ name: "Welcome" });
+        // router.push({ name: "Welcome" });
       }
     };
     return { handleLogout, user };
